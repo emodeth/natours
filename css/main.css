@@ -146,6 +146,41 @@ h2 {
       left: 20%;
       top: 10rem; }
 
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rem 15rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+  margin-top: -11rem; }
+  .feature__card {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s; }
+    .feature__card:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .feature__card h3 {
+      text-transform: uppercase; }
+    .feature__card p {
+      margin-top: 1rem; }
+    .feature__card i {
+      font-size: 6rem;
+      margin-bottom: 0.5rem;
+      background-image: linear-gradient(to right, #7ed56f, #28b485);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; }
+
 .btn--inline {
   background-color: transparent;
   border: none;
