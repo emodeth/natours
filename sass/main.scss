@@ -283,7 +283,7 @@ h2 {
   align-items: center;
 
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0;
   margin-top: -11rem;
 
   &__card-container {
@@ -477,6 +477,12 @@ h2 {
     &:hover &-side--back {
       transform: rotateY(0deg);
     }
+  }
+
+  &__discover-btn {
+    background-color: $color-medium-green !important;
+    color: #fff !important;
+    margin-top: 10rem;
   }
 }
 
