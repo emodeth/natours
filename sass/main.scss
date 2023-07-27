@@ -1,13 +1,20 @@
-$light-green: #7ed56f;
-$medium-green: #55c57a;
-$dark-green: #28b485;
-$black: #000;
+$color-light-green: #7ed56f;
+$color-medium-green: #55c57a;
+$color-dark-green: #28b485;
+$color-black: #000;
 
 $gradient: linear-gradient(
   to right bottom,
   rgba(126, 213, 111, 0.8),
   rgba(40, 180, 133, 0.8)
 );
+
+$color-light-yellow: #ffb900;
+$color-dark-yellow: #ff7730;
+
+$color-light-blue: #2998ff;
+$color-dark-blue: #5643fa;
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +48,11 @@ body {
 h2 {
   font-size: 3.5rem;
   text-transform: uppercase;
-  background-image: linear-gradient(to right, $light-green, $dark-green);
+  background-image: linear-gradient(
+    to right,
+    $color-light-green,
+    $color-dark-green
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -113,12 +124,12 @@ h2 {
     outline: none;
     border: none;
     color: #777;
-    font-size: 19px;
+    font-size: 1.6rem;
     text-transform: uppercase;
-    padding: 18px 48px;
+    padding: 1.5rem 4rem;
     cursor: pointer;
     transition: 0.2s;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: relative;
 
     animation: fade-up 0.65s ease-out;
@@ -128,12 +139,12 @@ h2 {
 
   &__button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($black, 0.2);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
   }
 
   &__button:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba($black, 0.2);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
   }
 }
 
@@ -191,7 +202,7 @@ h2 {
     &:hover {
       transform: scale(1.05) translateY(-0.5rem);
       z-index: 2;
-      outline: 1.5rem solid $medium-green;
+      outline: 1.5rem solid $color-medium-green;
       outline-offset: 2rem;
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
     }
@@ -220,7 +231,7 @@ h2 {
   padding: 20rem 15rem;
   background-image: $gradient, url(../img/nat-4.jpg);
   background-size: cover;
-  clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+  clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
 
   margin-top: -11rem;
 
@@ -254,11 +265,246 @@ h2 {
       font-size: 6rem;
       margin-bottom: 0.5rem;
 
-      background-image: linear-gradient(to right, $light-green, $dark-green);
+      background-image: linear-gradient(
+        to right,
+        $color-light-green,
+        $color-dark-green
+      );
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
+  }
+}
+
+.tour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -11rem;
+
+  &__card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    width: 100%;
+    margin-top: 8rem;
+  }
+
+  &__card {
+    width: 22%;
+    perspective: 150rem;
+    position: relative;
+    height: 52rem;
+
+    .card__image {
+      background-size: cover;
+      background-blend-mode: screen;
+      height: 23rem;
+      width: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .card__header {
+      font-size: 2.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #fff;
+      position: absolute;
+      top: 12rem;
+      right: 2rem;
+      text-align: right;
+      width: 75%;
+
+      span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
+    }
+
+    .card__details {
+      width: 80%;
+      list-style: none;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+
+    &-1 {
+      .tour__card-side--front {
+        .card__image {
+          background-image: linear-gradient(
+              to right bottom,
+              $color-light-yellow,
+              $color-dark-yellow
+            ),
+            url(../img/nat-5.jpg);
+        }
+
+        .card__header {
+          span {
+            background-image: linear-gradient(
+              to right bottom,
+              rgba($color-light-yellow, 0.85),
+              rgba($color-dark-yellow, 0.85)
+            );
+          }
+        }
+      }
+      .tour__card-side--back {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-light-yellow,
+          $color-dark-yellow
+        );
+      }
+    }
+
+    &-2 {
+      .tour__card-side--front {
+        .card__image {
+          background-image: linear-gradient(
+              to right bottom,
+              $color-light-green,
+              $color-dark-green
+            ),
+            url(../img/nat-6.jpg);
+        }
+
+        .card__header {
+          span {
+            background-image: linear-gradient(
+              to right bottom,
+              rgba($color-light-green, 0.85),
+              rgba($color-dark-green, 0.85)
+            );
+          }
+        }
+      }
+      .tour__card-side--back {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-light-green,
+          $color-dark-green
+        );
+      }
+    }
+
+    &-3 {
+      .tour__card-side--front {
+        .card__image {
+          background-image: linear-gradient(
+              to right bottom,
+              $color-light-blue,
+              $color-dark-blue
+            ),
+            url(../img/nat-6.jpg);
+        }
+
+        .card__header {
+          span {
+            background-image: linear-gradient(
+              to right bottom,
+              rgba($color-light-blue, 0.85),
+              rgba($color-dark-blue, 0.85)
+            );
+          }
+        }
+      }
+      .tour__card-side--back {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-light-blue,
+          $color-dark-blue
+        );
+      }
+    }
+
+    &-side {
+      height: 52rem;
+      transition: 0.8s ease;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+      &--front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &--back {
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 13rem 2rem;
+
+        span:nth-child(1) {
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 1.4rem;
+        }
+
+        .tour__price {
+          color: #fff;
+          font-size: 6rem;
+          font-weight: 100;
+          margin-bottom: 10rem;
+        }
+      }
+    }
+    &:hover &-side--front {
+      transform: rotateY(-180deg);
+    }
+    &:hover &-side--back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.btn--main {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  color: #777;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10rem;
+  position: relative;
+
+  animation: fade-up 0.65s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: backwards;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
   }
 }
 
@@ -268,7 +514,7 @@ h2 {
   outline: none;
 
   cursor: pointer;
-  color: $medium-green;
+  color: $color-medium-green;
   padding: 3px;
   border-bottom: 1px solid #55c57a;
   font-size: 1.6rem;
@@ -279,7 +525,7 @@ h2 {
   }
 
   &:hover {
-    background-color: $medium-green;
+    background-color: $color-medium-green;
     color: #fff;
     transform: translateY(-3px);
   }
