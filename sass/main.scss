@@ -56,6 +56,7 @@ h2 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  letter-spacing: 0.2rem;
 
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
@@ -483,6 +484,125 @@ h2 {
     background-color: $color-medium-green !important;
     color: #fff !important;
     margin-top: 10rem;
+  }
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 0;
+
+  font-size: 1.6rem;
+  position: relative;
+
+  .bg-video {
+    position: absolute;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h2 {
+    margin-bottom: 8rem;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  &__story {
+    width: 60%;
+    display: flex;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding: 6rem;
+    gap: 5rem;
+    transform: skewX(-12deg);
+    background-color: rgba($color: #fff, $alpha: 0.6);
+
+    &:hover .stories__name {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &:hover .stories__div {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    transform: skewX(12deg);
+  }
+
+  &__img {
+    width: 15rem;
+    height: 15rem;
+    flex-shrink: 0;
+
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    transform: skewX(12deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(3px);
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.7rem;
+      transform: translateY(2.5rem);
+      opacity: 0;
+      transition: 0.5s all;
+      text-transform: uppercase;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+    }
+
+    &--1 {
+      background-image: url(../img/nat-8.jpg);
+    }
+
+    &--2 {
+      background-image: url(../img/nat-9.jpg);
+    }
+  }
+
+  &__header {
+    margin-bottom: 1rem;
   }
 }
 
