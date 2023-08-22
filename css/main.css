@@ -486,6 +486,37 @@ h2 {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer__logo-box {
+    margin-bottom: 8rem; }
+    .footer__logo-box img {
+      width: 150px; }
+  .footer__content {
+    display: flex;
+    color: #fff;
+    padding: 0 20rem;
+    justify-content: space-between;
+    font-size: 17px; }
+  .footer__nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 20px;
+    border-top: 1px solid #777;
+    padding-top: 2rem; }
+    .footer__nav li {
+      transition: 0.15s;
+      cursor: pointer; }
+    .footer__nav li:hover {
+      color: #55c57a;
+      box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.1); }
+
 .btn--inline {
   background-color: transparent;
   border: none;

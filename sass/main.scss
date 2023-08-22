@@ -776,6 +776,50 @@ h2 {
   }
 }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo-box {
+    margin-bottom: 8rem;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    color: #fff;
+    padding: 0 20rem;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+
+  &__nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 20px;
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    li {
+      transition: 0.15s;
+      cursor: pointer;
+    }
+
+    li:hover {
+      color: $color-medium-green;
+      box-shadow: 0 1.5rem 1rem rgba($color-black, 0.1);
+    }
+  }
+}
+
 .btn--inline {
   background-color: transparent;
   border: none;
